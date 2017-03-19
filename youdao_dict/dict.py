@@ -106,6 +106,7 @@ class Dict:
             text = selection_data.get_text()
             if not text:
                 return False
+            text = ''.join(text.split('\n'))
             text = text.decode('raw-unicode-escape')
             if(len(text) > 20):
                 return False
